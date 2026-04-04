@@ -7,13 +7,13 @@ rate = st.number_input("Rate per kWh (₱)", value=10.5)
 
 st.write("---")
 st.write("How do you want to input your usage?")
-mode = st.radio("Pick one:", ["By appliance (watts + hours)", "By meter reading (start and end)"])
+choices = st.radio("Pick one:", ["By appliance (watts + hours)", "By meter reading (start and end)"])
 
 st.write("---")
 
 total = 0
 
-if mode == "By appliance (watts + hours)":
+if choices == "By appliance (watts + hours)":
     st.write("add your appliances below:")
     num_appliances = st.number_input("How many appliances?", min_value=1, max_value=20, value=1)
     days = st.number_input("How many days?", min_value=1, max_value=31, value=7)
@@ -32,13 +32,13 @@ else:
     days = st.number_input("How many days in between?", min_value=1, max_value=31, value=7)
     total = end - start
     if total < 0:
-        st.error("end reading cant be lower than start reading 😅")
+        st.error("Current Reading can't be lower than Previous Reading 😅")
         total = 0
 
 tips = [
-    "try unplugging appliances you're not using, they still consume power on standby 😬",
-    "if you're using aircon, try setting it to 26°C instead of lower, saves a lot 😅",
-    "check if any lights or electric fans were left on somewhere in the house 👀",
+    "Try unplugging appliances you're not using, they still consume power on standby ",
+    "If you're using aircon, try setting it to 26°C instead of lower, saves a lot ",
+    "Check if any lights or electric fans were left on somewhere in the house ",
 ]
 
 st.write("---")
