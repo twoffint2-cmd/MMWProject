@@ -32,13 +32,17 @@ else:
     days = st.number_input("How many days in between?", min_value=1, max_value=31, value=7)
     total = end - start
     if total < 0:
-        st.error("Current Reading can't be lower than Previous Reading 😅")
+        st.error("Current Reading can't be lower than Previous Reading ")
         total = 0
 
 tips = [
     "Try unplugging appliances you're not using, they still consume power on standby ",
     "If you're using aircon, try setting it to 26°C instead of lower, saves a lot ",
     "Check if any lights or electric fans were left on somewhere in the house ",
+    "Clean your aircon filters regularly, dirty filters make it work harder and use more power",
+    "Set your computer or laptop to sleep mode when not in use for a while",
+
+    
 ]
 
 st.write("---")
@@ -54,6 +58,6 @@ if st.button("Calculate"):
 
         if avg > 20:
             st.warning("High usage! Try to reduce appliance usage.")
-            st.write("💡 tip:", random.choice(tips))
+            st.write(" Tip:", random.choice(tips))
         else:
             st.success("Good job! Your usage is efficient.")
