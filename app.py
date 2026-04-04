@@ -41,6 +41,8 @@ tips = [
     "Check if any lights or electric fans were left on somewhere in the house ",
     "Clean your aircon filters regularly, dirty filters make it work harder and use more power",
     "Set your computer or laptop to sleep mode when not in use for a while",
+    "Unplug your phone charger when not in use, it still draws power even without a phone",
+
 
     
 ]
