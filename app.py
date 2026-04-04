@@ -27,8 +27,8 @@ if mode == "By appliance (watts + hours)":
 
 else:
     st.write("enter your meter readings:")
-    start = st.number_input("Start reading (kWh)", min_value=0.0)
-    end = st.number_input("End reading (kWh)", min_value=0.0)
+    start = st.number_input("Previous Reading (kWh)", min_value=0.0)
+    end = st.number_input("Current Reading (kWh)", min_value=0.0)
     days = st.number_input("How many days in between?", min_value=1, max_value=31, value=7)
     total = end - start
     if total < 0:
