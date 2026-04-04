@@ -3,7 +3,7 @@ import random
 
 st.title("⚡ Electricity Tracker")
 
-rate = st.number_input("Rate per kWh (₱)", )
+rate = st.number_input("Rate per kWh (₱)", value=10.5)
 
 st.write("---")
 st.write("How do you want to input your usage?")
